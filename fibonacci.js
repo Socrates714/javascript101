@@ -1,22 +1,21 @@
-var count = 1; //Variable to keep track of the current number.
-var sum = 0;  //Variable to keep track of the sum of even numbers.
+var count = 1; 
+var sum = 0;  
 while (count < 4000000) {
 
-	var prev_count;  //Variable to keep track of the previous number.
-	var two_counts_back;  //Variable to keep track of 2 numbers back.
+	var prev_count;  
 	
-	if (count == 1){  //deals with the first number in the fibonacci sequence.
+	if (count == 1){  
 		prev_count = count;
 		count += count;
 	}
-	else {  //deals with the rest of the sequence up to 4000000
-		two_counts_back = prev_count;  //keep track of past numbers to add
-		prev_count = count;            //to make fibonacci sequence
+	else {  
+		two_counts_back = prev_count;  
+		prev_count = count;            
 		count = count + two_counts_back;
 	}
 	if (count % 2 == 0) {
 			sum += count;
 	}
 
-}//print sum of even numbers
+}
 console.log("The sum of all even numbers is " + sum);
